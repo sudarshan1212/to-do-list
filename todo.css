@@ -56,11 +56,20 @@ color:#44bd32;
     padding:  10px 30px;
     border-radius: 0px 40px 40px 0px;
     cursor: pointer;
+    position: relative;
+    transition: all;
+   
+}
+.button:hover{
+  
+    background-color: #70a1ff;   
+color:#f5f6fa; 
+
 }
 
 ul li{
     margin-top: 5px;
-    font-weight: 700;
+    font-weight: 400;
     color: #487eb0; 
     list-style: none;
     font-size: 17px;
@@ -68,30 +77,50 @@ ul li{
     user-select: none;
     cursor: pointer;
     position: relative;
- 
-
-
-
-
+   
 }
-ul li::after{
- 
-    content:   " ";
+
+
+.ul li::before{ 
+    content:" ";
     position: absolute;
     height: 18px; 
-margin-left: 220px;
+margin-left: 245px;
    width: 18px;
     border-radius: 50%;
-    background-image: url('./images/checked.png');
+    background-image: url('./images/unchecked.png');
     background-position: center;
     background-size: cover;
 }
 ul li.checked{
     
-    color: #ced6e0;
+    color: #9ca3ab;
 text-decoration: line-through;
+
+
 }
 
-ul li.checked::after{
+ul li.checked::before{
+       position: absolute;
     background-image: url('./images/checked.png');
 }
+
+ul li span{
+    position: absolute;
+margin-right: 22px;
+    width: 32px;
+    height: 32px;
+ font-size: 30px;
+ text-align: center;
+ right: 0;  
+ border-radius: 50%;
+ color:#2f3542;
+
+ line-height: 40px;
+ top: 1px;
+}
+ul li span:hover{
+    color: #487eb0; 
+
+}
+
